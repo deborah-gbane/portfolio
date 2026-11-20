@@ -104,7 +104,7 @@ export default function KMeansLab() {
       const col = COLORS.map((c) => cs.getPropertyValue(c.slice(4, -1)).trim());
 
       // grille
-      ctx.strokeStyle = th.rule; ctx.lineWidth = 1; ctx.font = "10px 'Geist Mono', monospace"; ctx.fillStyle = th.muted;
+      ctx.strokeStyle = th.rule; ctx.lineWidth = 1; ctx.font = "10px 'Geist Mono Variable', monospace"; ctx.fillStyle = th.muted;
       for (let v = 20; v <= 140; v += 20) { ctx.beginPath(); ctx.moveTo(X(v), pt); ctx.lineTo(X(v), h - pb); ctx.stroke(); ctx.textAlign = "center"; ctx.fillText(v, X(v), h - pb + 14); }
       for (let v = 0; v <= 100; v += 25) { ctx.beginPath(); ctx.moveTo(pl, Y(v)); ctx.lineTo(w - pr, Y(v)); ctx.stroke(); ctx.textAlign = "right"; ctx.fillText(v, pl - 6, Y(v) + 3); }
       ctx.textAlign = "center"; ctx.fillText(getLang() === "en" ? "Annual income (k$)" : "Revenu annuel (k$)", (pl + w - pr) / 2, h - 4);

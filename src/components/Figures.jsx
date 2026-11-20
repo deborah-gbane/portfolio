@@ -2,7 +2,7 @@ import { useCanvas, rgba, rand, randn, clamp, lerp } from "../hooks.js";
 import { getLang } from "../i18n.jsx";
 const L10 = (fr, en) => (getLang() === "en" ? en : fr);
 
-const MONO = "10px 'Geist Mono', monospace";
+const MONO = "10px 'Geist Mono Variable', monospace";
 
 function axes(ctx, w, h, th, pad = 28) {
   ctx.strokeStyle = th.rule;
@@ -193,7 +193,7 @@ const FIGS = {
       const local = (t % 1.6) / 1.6;
       const logits = cands.map((_, k) => 2.6 - k * 0.75 + Math.sin(t * 2 + k) * 0.08);
       const ex = logits.map(Math.exp), Z = ex.reduce((a, b) => a + b, 0);
-      ctx.fillStyle = th.ink; ctx.font = "13px 'Geist', sans-serif";
+      ctx.fillStyle = th.ink; ctx.font = "13px 'Geist Variable', sans-serif";
       ctx.fillText(ctxt + (local > 0.5 ? " ▍" : ""), 8, 22);
       const lx = 96, bw = w - lx - 50, bh = Math.min(14, (h - 50) / 5 - 8);
       cands.forEach((c, k) => {

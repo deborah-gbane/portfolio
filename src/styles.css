@@ -22,8 +22,8 @@
   /* palette des clusters (graphiques) */
   --c1: #b7a597; --c2: #f26b1d; --c3: #fdba74; --c4: #9a3412; --c5: #57423a;
 
-  --sans: "Geist", system-ui, -apple-system, "Segoe UI", sans-serif;
-  --mono: "Geist Mono", ui-monospace, "SF Mono", monospace;
+  --sans: "Geist Variable", "Geist", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "Geist Mono Variable", "Geist Mono", ui-monospace, "SF Mono", monospace;
   --wrap: 1180px;
   --gutter: clamp(20px, 4vw, 40px);
   --ease: cubic-bezier(.16, 1, .3, 1);

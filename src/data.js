@@ -1,5 +1,6 @@
 // Chemin des fichiers de /public, compatible avec le sous-dossier de GitHub Pages.
 const asset = (p) => `${import.meta.env.BASE_URL}${p}`;
+const reveal = (s) => atob(s).split("").reverse().join("");
 
 // Contenu du portfolio — issu du CV, des dépôts GitHub (github.com/deborah-gbane) et du code des projets.
 // Chaque texte existe en français (fr) et en anglais (en).
@@ -9,8 +10,9 @@ export const profile = {
   short: "A. D. Gbane",
   location: { fr: "Abidjan, Côte d'Ivoire", en: "Abidjan, Côte d'Ivoire" },
   status: { fr: "Recherche un stage en data science / IA", en: "Looking for a data science / AI internship" },
-  email: "deborahgbane81@gmail.com",
-  phone: "+225 07 69 25 35 22",
+  // encodées pour ne pas être aspirées par les robots qui fouillent le code
+  get email() { return reveal("bW9jLmxpYW1nQDE4ZW5hYmdoYXJvYmVk"); },
+  get phone() { return reveal("MjIgNTMgNTIgOTYgNzAgNTIyKw=="); },
   github: "https://github.com/deborah-gbane",
   linkedin: "https://www.linkedin.com/in/a%C3%AFcha-d%C3%A9borah-gbane-02a628350",
   cv: asset("cv-aicha-deborah-gbane.pdf"),

@@ -27,12 +27,12 @@ function makeAtlas() {
     if (FILLED.has(i)) {
       g.fillStyle = "#fff"; g.fill();
       g.globalCompositeOperation = "destination-out";
-      g.font = `600 ${S * 0.52}px "Geist Mono", monospace`;
+      g.font = `600 ${S * 0.52}px "Geist Mono Variable", monospace`;
       g.fillText(ch, S / 2, S / 2 + 4);
     } else {
       g.strokeStyle = "rgba(255,255,255,.95)"; g.lineWidth = 7; g.stroke();
       g.fillStyle = "#fff";
-      g.font = `500 ${S * 0.5}px "Geist Mono", monospace`;
+      g.font = `500 ${S * 0.5}px "Geist Mono Variable", monospace`;
       g.fillText(ch, S / 2, S / 2 + 4);
     }
     g.restore();
@@ -50,9 +50,9 @@ function sampleName(lines, count, worldW) {
   const g = c.getContext("2d");
   g.fillStyle = "#fff"; g.textAlign = "center"; g.textBaseline = "middle";
   const fs = 190;
-  g.font = `600 ${fs}px "Geist", system-ui, sans-serif`;
+  g.font = `600 ${fs}px "Geist Variable", system-ui, sans-serif`;
   const k = Math.min(1, (W * 0.94) / Math.max(...lines.map((l) => g.measureText(l).width)));
-  g.font = `600 ${fs * k}px "Geist", system-ui, sans-serif`;
+  g.font = `600 ${fs * k}px "Geist Variable", system-ui, sans-serif`;
   lines.forEach((l, i) => g.fillText(l, W / 2, H / 2 + (i - (lines.length - 1) / 2) * fs * k * 1.02));
   const d = g.getImageData(0, 0, W, H).data, pts = [];
   for (let y = 0; y < H; y += 3) for (let x = 0; x < W; x += 3) if (d[(y * W + x) * 4 + 3] > 128) pts.push([x, y]);

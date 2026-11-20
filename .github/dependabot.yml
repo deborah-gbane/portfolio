@@ -1,0 +1,13 @@
+# Surveillance automatique des dépendances : Dependabot propose une mise à jour
+# dès qu'une version corrige une faille (npm) ou qu'une action GitHub évolue.
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 5
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
