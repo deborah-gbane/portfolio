@@ -1,3 +1,6 @@
+// Chemin des fichiers de /public, compatible avec le sous-dossier de GitHub Pages.
+const asset = (p) => `${import.meta.env.BASE_URL}${p}`;
+
 // Contenu du portfolio — issu du CV, des dépôts GitHub (github.com/deborah-gbane) et du code des projets.
 // Chaque texte existe en français (fr) et en anglais (en).
 
@@ -10,7 +13,7 @@ export const profile = {
   phone: "+225 07 69 25 35 22",
   github: "https://github.com/deborah-gbane",
   linkedin: "https://www.linkedin.com/in/a%C3%AFcha-d%C3%A9borah-gbane-02a628350",
-  cv: "/cv-aicha-deborah-gbane.pdf",
+  cv: asset("cv-aicha-deborah-gbane.pdf"),
 };
 
 export const metrics = [
@@ -44,7 +47,7 @@ export const about = {
 export const projects = [
   {
     id: "assurconnect", year: "2025", cat: "web", viz: "graph",
-    images: ["/projects/assurconnect.jpg", "/projects/assurconnect-full.jpg"],
+    images: [asset("projects/assurconnect.jpg"), asset("projects/assurconnect-full.jpg")],
     demo: "https://assurance-connect-africa.vercel.app/",
     title: { fr: "AssurConnect — super-app d'assurance pour l'Afrique", en: "AssurConnect — insurance super-app for Africa" },
     summary: {
@@ -146,7 +149,7 @@ export const projects = [
   },
   {
     id: "titanic", year: "2026", cat: "ml", viz: "sigmoid",
-    images: ["/projects/titanic.jpg", "/projects/titanic-chat.jpg"],
+    images: [asset("projects/titanic.jpg"), asset("projects/titanic-chat.jpg")],
     repo: "https://github.com/deborah-gbane/titanic-ai-assistant",
     title: { fr: "Titanic — estimateur de survie & assistant IA", en: "Titanic — survival estimator & AI assistant" },
     summary: {
@@ -172,7 +175,7 @@ export const projects = [
   },
   {
     id: "mall", year: "2026", cat: "ml", viz: "kmeans",
-    images: ["/projects/mall.jpg"],
+    images: [asset("projects/mall.jpg")],
     repo: "https://github.com/deborah-gbane/mall-customers-segmentation",
     title: { fr: "Segmentation clients — K-Means", en: "Customer segmentation — K-Means" },
     summary: {
@@ -199,7 +202,7 @@ export const projects = [
   },
   {
     id: "etudiants", year: "2026", cat: "ml", viz: "boundary",
-    images: ["/projects/etudiants.jpg"],
+    images: [asset("projects/etudiants.jpg")],
     repo: "https://github.com/deborah-gbane/prediction-reussite-etudiants",
     title: { fr: "Prédiction de la réussite étudiante", en: "Student success prediction" },
     summary: {
@@ -224,7 +227,7 @@ export const projects = [
   },
   {
     id: "expert-ds", year: "2026", cat: "nlp", viz: "tokens",
-    images: ["/projects/expert-ds.jpg"],
+    images: [asset("projects/expert-ds.jpg")],
     demo: "https://expert-data-science.onrender.com/",
     repo: "https://github.com/deborah-gbane/expert-data-science",
     title: { fr: "Expert Data Science — assistant conversationnel", en: "Expert Data Science — conversational assistant" },
@@ -250,7 +253,7 @@ export const projects = [
   },
   {
     id: "cancervision", year: "2026", cat: "vision", viz: "cloud",
-    images: ["/projects/cancervision.jpg"],
+    images: [asset("projects/cancervision.jpg")],
     demo: "https://deborah-gbane.github.io/CancerVision-3D/",
     repo: "https://github.com/deborah-gbane/CancerVision-3D",
     title: { fr: "CancerVision 3D", en: "CancerVision 3D" },

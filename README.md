@@ -1,6 +1,6 @@
 # Portfolio — Aïcha Déborah Gbane
 
-Portfolio data science & intelligence artificielle (FR / EN).
+Portfolio data science & intelligence artificielle (FR / EN) — en ligne : https://deborah-gbane.github.io/portfolio/
 
 - **Stack :** React 18, Vite, Three.js, GSAP, Lenis
 - **Contenu :** `src/data.js` (projets, parcours, compétences) et `src/i18n.jsx` (textes de l'interface)
